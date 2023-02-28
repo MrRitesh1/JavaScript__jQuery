@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasClass</title>
+</head>
+<style>
+    #fast {
+        background-color: darkcyan;
+        color: darkorange;
+        margin: 20px;
+        padding: 20px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-hasclass").click(function () {
+            // console.log($("#conten h1").hasClass('second'))
+            var a = $("#conten h1").hasClass('second')
+            if (a == true) {
+                console.log('Yas')
+            } else {
+                console.log('No')
+            }
+        })
+    })
+</script>
+
+<body>
+    <div id="fast">
+        <button id="btn-hasclass">HasClass</button>
+        <div id="conten">
+            <h1 class="second">Welcome to HasClass</h1>
+        </div>
+    </div>
+</body>
+
+</html>

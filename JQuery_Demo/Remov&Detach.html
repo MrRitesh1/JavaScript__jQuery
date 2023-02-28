@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remov</title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-remov").click(function () {
+            $("#conten").remove();
+        })
+        $("#btn-detach").click(function () {
+            $("#conten").detach();
+        })
+    })
+</script>
+
+<body>
+    <button id="btn-remov">Remove</button>
+    <button id="btn-detach">Detach</button>
+    <div id="conten">
+        <h1 id="tex">Welcome to Remov Mathad in JQuery </h1>
+
+
+    </div>
+
+
+</body>
+
+</html>

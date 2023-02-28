@@ -1,0 +1,290 @@
+body {
+    background-color: cadetblue;
+    color: black;
+}
+
+#nevigesan {
+    /* background-color: darkblue; */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ddd;
+    /* border: 1px solid#000; */
+    border-radius: 5px;
+    flex: auto;
+}
+
+.btn-hadar {
+    border-radius: 5px;
+    background-color: rgb(11, 12, 12);
+    color: #ddd;
+    border-width: 1px;
+}
+
+#courses {
+    flex: auto;
+    background-color: antiquewhite;
+    height: 190px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+    border: 3px solid#fff;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: none;
+}
+
+#abut {
+    flex: auto;
+    background-color: antiquewhite;
+    height: 110px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+    border: 3px solid#fff;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: none;
+}
+
+#images {
+    flex: auto;
+    margin: 10px;
+    /* border-bottom-right-radius: 80px; */
+    border-bottom-left-radius: 80px;
+
+    display: none;
+}
+
+#images1 {
+    flex: auto;
+    margin: 10px;
+    /* border-bottom-left-radius: 80px; */
+    display: none;
+}
+
+#images2 {
+    flex: auto;
+    margin: 10px;
+    /* border-bottom-left-radius: 80px; */
+    border-bottom-right-radius: 80px;
+    display: none;
+}
+
+#tebalhedar {
+    flex: auto;
+    margin-top: 10px;
+    margin-top: 100px;
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+}
+
+#tebal {
+    flex: auto;
+
+    margin: 10px;
+}
+
+#fulname {
+    margin-top: 10px;
+
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#ID {
+    margin-top: 10px;
+
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#remove {
+    margin-top: 10px;
+
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#position {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#offes {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#age {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#btn {
+    background-color: cadetblue;
+    margin: 5px;
+    flex: auto;
+
+}
+
+/* #tebalhedar #tebal #deta {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid#000;
+    border-radius: 10px;
+    flex: auto;
+} */
+
+
+.clilckoble {
+    cursor: pointer;
+    background-color: rgb(1, 80, 1);
+    color: aliceblue;
+    flex: auto;
+
+}
+
+.clilcbutton {
+    cursor: pointer;
+    /* background-color: rgb(238, 244, 238); */
+    border-color: rgb(10, 104, 10);
+    border-radius: 5px;
+    font-size: 15px;
+    flex: auto;
+
+}
+
+#conten-img {
+    background-color: darkgray;
+    margin: 10px;
+    height: 400px;
+    padding: 15px;
+    border-radius: 30px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    flex: auto;
+
+}
+
+#img1 {
+    border-radius: 200px;
+    margin: 10px;
+    margin-left: 100px;
+    flex: auto;
+
+}
+
+#img2 {
+    border-radius: 200px;
+    margin: 10px;
+    margin-left: 80px;
+    flex: auto;
+}
+
+#img3 {
+    border-radius: 200px;
+    margin: 10px;
+    margin-left: 80px;
+    flex: auto;
+}
+
+
+
+#no-recod {
+    display: none;
+}
+
+#nav a {
+    color: #ebf2ec;
+    border: 0.5px solid rgb(8, 7, 7);
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 22px;
+    font-weight: 400;
+    border-radius: 10px;
+    flex: auto;
+}
+
+#nav a:hover {
+    background-color: rgb(13, 14, 14);
+
+}
+
+.active {
+    background-color: #000;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+#tebal td,
+#tebal th {
+    border: 0.5px solid #ddd;
+    padding: 8px;
+    flex: auto;
+}
+
+#tebal tr:hover {
+    background-color: #ddd;
+    flex: auto;
+
+}
+
+.remove1 {
+    cursor: pointer;
+    background-color: rgb(136, 42, 6);
+    color: aliceblue;
+    flex: auto;
+
+}
+
+#courses-imag {
+    flex: auto;
+    margin: 20px;
+    padding: 10px;
+}
+
+#imag1 {
+    flex: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#imag2 {
+    flex: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#imag3 {
+    flex: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#imag4 {
+    flex: auto;
+    border-radius: 20px;
+    margin: 10px;
+}

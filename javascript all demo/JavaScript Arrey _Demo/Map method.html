@@ -1,0 +1,76 @@
+<html>
+
+<body>
+
+    <script>
+
+        var a = [
+            {
+                "name": "abc",
+                "RollNo": 1,
+
+            },
+            {
+                "name": "xyz",
+                "RollNo": 2
+            },
+            {
+                "name": "pqr",
+                "RollNo": 3
+            },
+            {
+                "name": "lmn",
+                "RollNo": 4
+            },
+            {
+                "name": "opq",
+                "RollNo": 5
+            },
+        ];
+        // var p = [
+        // {fname : "Tomi" , lname: "Baba"}, 
+        // {fname : "Jeri" , lname: "Baba"},
+        // {fname : "Doremon" , lname: "Kumar"},
+        // {fname : "Nobita" , lname: "Sharma"},
+        // ];
+
+        var b = a.map(function c(ele, i) {
+            if (ele.RollNo % 2 == 0) {
+                return {
+
+                    "name": ele.name,
+                    "RollNo": ele.RollNo,
+                    "divA": {
+                        "grup": "A",
+                        "totalStud": 100,
+                    },
+                }
+
+            } else {
+                return {
+
+                    "name": ele.name,
+                    "RollNo": ele.RollNo,
+                    "divB": {
+                        "grup": "B",
+                        "totalStud": 50,
+                    },
+                }
+            }
+
+            //     return {
+
+            //         "name": ele.name,
+            //         "RollNo":"A" + ele.RollNo,
+            //        
+        });
+        debugger
+        document.write(b + "<br><hr>");
+        // var q = p.map(function u(o) {
+        //     return o.fname + " " + o.lname + "<br>";
+        // });
+        // document.write(q);
+    </script>
+</body>
+
+</html>

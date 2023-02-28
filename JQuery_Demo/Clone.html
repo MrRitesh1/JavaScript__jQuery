@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Mathad JQuery </title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+
+    #conten1 {
+        background-color: rgb(227, 51, 51);
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+    }
+
+    #second {
+        background-color: rgb(224, 213, 62);
+        color: aliceblue;
+        margin: 30px;
+        padding: 20px;
+    }
+
+    #conten2 {
+        background-color: rgb(142, 89, 89);
+        margin: 30px;
+        padding: 20px;
+    }
+
+    #conten22 {
+        background-color: darkcyan;
+        margin: 30px;
+        padding: 20px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-clone").click(function () {
+            $("#conten #tex").clone().prependTo("#tex1")
+        })
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#btn-clone2").click(function () {
+            $(this).css({ "color": "#F5F1F1", "background-color": "#272626" })
+            $("#tex-conten ").clone().prependTo("#conten22")
+            $("#conten22").css({ "color": "#F5F1F1", "background-color": "#272626" })
+        })
+    })
+</script>
+
+<body>
+    <div>
+        <button type="button" id="btn-clone">Clone</button>
+
+        <div id="conten">
+            <h3 id="tex">Welcome to Clone Mathad JQuery </h3>
+        </div>
+        <div id="conten1">
+            <h3 id="tex1">Hello </h3>
+
+        </div>
+    </div>
+    <div id="second">
+        <button type="button" id="btn-clone2">Clone</button>
+        <div id="conten2">
+            <div id="tex-conten">
+                <h2 id="tex2">Welcome</h2>
+                <p>JQuery in Clone Mathad...........</p>
+            </div>
+        </div>
+        <div id="conten22">
+
+        </div>
+    </div>
+</body>
+
+</html>

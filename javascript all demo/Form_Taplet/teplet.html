@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templet</title>
+</head>
+<link rel="stylesheet" href="teplet.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var a = $(this).val().toLowerCase();
+            var countar = 0
+            $("#tebal  tbody tr").filter(function () {
+                if ($(this).text().toLowerCase().indexOf(a) > -1) {
+                    countar++;
+                } else {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(a) > -1)
+                }
+            })
+            if (countar == 0) {
+                $("#no-recod").show();
+            }
+        })
+        $("th").each(function (column) {
+            $(this).hover(function () {
+                $(this).toggleClass("clilckoble")
+            })
+            $(this).click(function () {
+                var recods = $("table > tbody > tr")
+                recods.sort(function (a, b) {
+                    var value1 = $(a).children("td").eq(column).text();
+                    var value2 = $(b).children("td").eq(column).text();
+                    return (value1 < value2) ? -1 : (value1 > value2 ? 1 : 0)
+                })
+                $.each(recods, function (index, row) {
+                    $("tbody").append(row);
+                })
+            })
+        })
+        $("button").each(function (column) {
+            $(this).hover(function () {
+                $(this).toggleClass("clilcbutton")
+            })
+        })
+        $("#img1").hover(function () {
+            $("#img1").attr({ "width": "284" })
+        })
+        $("#img2").hover(function () {
+            $("#img1").attr({ "width": "184" })
+        })
+        $("#img1").hover(function () {
+            $("#img2").attr({ "width": "184" })
+        })
+        $("#img2").hover(function () {
+            $("#img2").attr({ "width": "284" })
+        })
+        $("#img3").hover(function () {
+            $("#img2").attr({ "width": "184" })
+        })
+        $("#img2").hover(function () {
+            $("#img3").attr({ "width": "184" })
+        })
+        $("#img3").hover(function () {
+            $("#img3").attr({ "width": "284" })
+        })
+        $("#img2").hover(function () {
+            $("#img3").attr({ "width": "184" })
+        })
+        $("#img1").hover(function () {
+            $("#img3").attr({ "width": "184" })
+        })
+        $("#img3").hover(function () {
+            $("#img1").attr({ "width": "184" })
+        })
+        function pagination() {
+            var rowShow = parseInt($("#selectr").val());
+            var rowTotal = $("#tebal tbody tr").length;
+            var numPages = rowTotal / rowShow;
+            $("#nav").empty();
+            for (a = 0; a < numPages; a++) {
+                var pageNum = a + 1;
+                $("#nav").append("<a rel='" + a + "'>" + pageNum + "</a>");
+            }
+            $("#tebal tbody tr").hide();
+            $("#tebal tbody tr").slice(0, rowShow).show();
+            $("#nav a").addClass("active");
+            $("#nav a").bind('click', function () {
+                $("#nav a").removeClass('active');
+                $(this).addClass('active');
+                var curtPag = $(this).attr("rel");
+                var startItam = curtPag * rowShow;
+                var endItam = startItam + rowShow;
+                $("#tebal tbody tr").css('opacity', '0.0').hide().slice(startItam, endItam).
+                    css('display', 'table-row').animate({ opacity: 1 }, 300);
+            })
+        }
+        $("#tebal").after("<div id='nav'></div>");
+        pagination();
+        $("#tebal").on('click', '.remove', function () {
+            $(this).closest('tr').remove();
+            pagination();
+        })
+        $(".remove").hover(function () {
+            $(this).toggleClass("remove1")
+        })
+        $("#selectr").change(function () {
+            pagination();
+            $(this).find().val();
+        })
+
+        $(".btn-hadar").hover(function () {
+            $("#courses").hide()
+            $("#abut").hide()
+
+        })
+        $("#btn-courses").hover(function () {
+            $("#abut").hide()
+            $("#courses").slideDown(2000)
+        })
+
+        $(".btn-hadar").hover(function () {
+            $("#courses").hide()
+            $("#abut").hide()
+        })
+        $("#btn-abut").hover(function () {
+            $("#courses").hide()
+            $("#abut").fadeIn(2000)
+        })
+
+        $("body").hover(function () {
+            $("#images").show(2000)
+        })
+        $("body").hover(function () {
+            $("#images1").fadeIn(4000)
+        })
+        $("body").hover(function () {
+            $("#images2").show(6000)
+        })
+
+
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#imag1").hover(function () {
+            $("#imag1").attr({ "width": "280" })
+        })
+        $("#imag2").hover(function () {
+            $("#imag1").fadeTo(1000, 0.5)
+        })
+        $("#imag2").hover(function () {
+            $("#imag2").animate({ width: '310', })
+        })
+        $("#imag3").hover(function () {
+            $("#imag2").fadeTo(1000, 0.5)
+        })
+    })
+</script>
+
+<body>
+    <div id="nevigesan">
+        <div id="teb-conten" role="row">
+            <button class="btn-hadar">Home</button>
+            <button class="btn-hadar" id="btn-courses">Courses</button>
+            <button class="btn-hadar" id="btn-abut">Abut</button>
+            <button class="btn-hadar">Settinge</button>
+        </div>
+
+    </div>
+    <div id="courses">
+        <p>Flatar</p>
+        <p>React</p>
+        <p>ReactNative</p>
+        <p>React JS</p>
+        <p>JavaScript</p>
+
+    </div>
+    <div id="abut">
+        <p>Contec US</p>
+        <p>Emial</p>
+        <p>Reviews</p>
+    </div>
+    <img id="images" src="../JQuery/images/1576227666phpqUHpt1.jpeg" height="200" />
+    <img id="images1" src="../JQuery/images/IT-Courses1.jpg" height="200" />
+    <img id="images2" src="../JQuery/images/TopprofessionalITcoursetopursueincollege.jpg" height="200" />
+
+    <div id="tebalhedar">
+        <div>
+            <h3>Search :-
+                <input id="myInput" type="text" placeholder="Search.." />
+            </h3>
+        </div>
+        <div>
+            <h3>Show :-
+                <select name="Data" id="selectr">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </h3>
+        </div>
+
+        <table id="tebal">
+            <thead>
+                <tr>
+                    <th id="ID"> ID</th>
+                    <th id="fulname">Ful Name </th>
+                    <th id="position">Position</th>
+                    <th id="offes">Offes</th>
+                    <th id="age">Age</th>
+                    <th id="remove">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="deta">
+                    <td> 1 </td>
+                    <td> Doremon </td>
+                    <td> System Architec </td>
+                    <td> Edinburgh </td>
+                    <td> 23</td>
+                    <td class="remove"> X </td>
+                </tr>
+                <tr id="deta">
+                    <td> 2 </td>
+
+                    <td> Tom </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 25</td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 3 </td>
+
+                    <td> Jary </td>
+                    <td> Integration Specialist </td>
+                    <td> London </td>
+                    <td> 27 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 4 </td>
+
+                    <td> Nobita </td>
+                    <td> Integration Specialist </td>
+                    <td> San Francisco </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 5 </td>
+
+                    <td> Tiger </td>
+                    <td> Sales Assistant </td>
+                    <td> Edinburgh </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 6 </td>
+
+                    <td> Ravi </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 26 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 7 </td>
+
+                    <td> Ram </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 8 </td>
+
+                    <td> Hary </td>
+                    <td> Integration Specialist </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 9 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 10 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 28 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 11 </td>
+
+                    <td> Doremon </td>
+                    <td> System Architec </td>
+                    <td> Edinburgh </td>
+                    <td> 23</td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 12 </td>
+
+                    <td> Tom </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 25</td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 13 </td>
+
+                    <td> Jary </td>
+                    <td> Integration Specialist </td>
+                    <td> London </td>
+                    <td> 27 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 14 </td>
+
+                    <td> Nobita </td>
+                    <td> Integration Specialist </td>
+                    <td> San Francisco </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 15 </td>
+
+                    <td> Tiger </td>
+                    <td> Sales Assistant </td>
+                    <td> Edinburgh </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 16 </td>
+
+                    <td> Ravi </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 26 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 17 </td>
+
+                    <td> Ram </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 18 </td>
+
+                    <td> Hary </td>
+                    <td> Integration Specialist </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 19 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 20 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 28 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 21 </td>
+
+                    <td> Doremon </td>
+                    <td> System Architec </td>
+                    <td> Edinburgh </td>
+                    <td> 23</td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 22 </td>
+
+                    <td> Tom </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 25</td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 23 </td>
+
+                    <td> Jary </td>
+                    <td> Integration Specialist </td>
+                    <td> London </td>
+                    <td> 27 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 24 </td>
+
+                    <td> Nobita </td>
+                    <td> Integration Specialist </td>
+                    <td> San Francisco </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 25 </td>
+
+                    <td> Tiger </td>
+                    <td> Sales Assistant </td>
+                    <td> Edinburgh </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 26 </td>
+
+                    <td> Ravi </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 26 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 27 </td>
+
+                    <td> Ram </td>
+                    <td> Sales Assistant </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 28 </td>
+
+                    <td> Hary </td>
+                    <td> Integration Specialist </td>
+                    <td> Tokyo </td>
+                    <td> 23 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 29 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 20 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+                <tr id="deta">
+                    <td> 30 </td>
+
+                    <td> Hary </td>
+                    <td> Software Engineer </td>
+                    <td> Tokyo </td>
+                    <td> 28 </td>
+                    <td class="remove"> X </td>
+
+                </tr>
+
+                <h2 id="no-recod">No record find </h2>
+
+            </tbody>
+        </table>
+    </div>
+    <div id="courses-imag">
+        <img id="imag1" src="../JQuery/images/wp3982891.webp" height="150" />
+        <img id="imag2" src="../JQuery/images/3343687.jpg" height="150" />
+        <img id="imag3" src="../JQuery/images/71ee32577432648f9e45fbd63b2cf261.jpg" height="150" />
+        <img id="imag4" src="../JQuery/images/360_F_401123666_xXsAFQdDOEaElJ5L6fFe9loY8VkqmQAZ.jpg" height="150" />
+
+    </div>
+    <!-- <div id="conten-img">
+        <h1>Courses</h1>
+        <div id="courses-img">
+            <img id="img1" src="../JQuery/images/TopprofessionalITcoursetopursueincollege.jpg" width="184" height="113">
+            <img id="img2" src="../JQuery/images/1576227666phpqUHpt1.jpeg" width="184" height="113">
+            <img id="img3" src="../JQuery/images/IT-Courses1.jpg" width="184" height="113">
+        </div>
+    </div> -->
+</body>
+
+
+</html>

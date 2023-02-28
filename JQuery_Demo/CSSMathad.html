@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mathad JQuery</title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btn-css').click(function () {
+            $('#conten').css({ "color": "red", "background-color": "#01050D" });
+        });
+    });
+</script>
+
+<body>
+    <div>
+        <button id="btn-css">Add Style</button>
+
+        <div id="conten">
+            <h1 id="tex">Welcome to CSS Mathad JQuery</h1>
+        </div>
+    </div>
+    <div id="second">
+        <button id="btn-css2">CSS</button>
+        <div id="conten2">
+            <h3>Welcome to CSS</h3>
+            <p id="tex2">fiwej;fikepjfiejfkmwefhehfijefio<i id="tex22">weecff</i>fuefyguffguuryiurouiyuyy9oy</p>
+        </div>
+    </div>
+</body>
+
+</html>

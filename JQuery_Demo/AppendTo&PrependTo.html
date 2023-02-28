@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendTo & PrependTo Mathad JQuery</title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+
+    #second {
+        background-color: darkslategray;
+        margin: 30px;
+    }
+
+    #conten2 {
+        background-color: cornsilk;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#btn-appendto').click(function () {
+            $('<h3>Hello i am AppendTo</h3>').appendTo('#tex')
+        })
+        $('#btn-prependto').click(function () {
+            $('<h3>Hello i am PrependTo</h3>').prependTo('#tex')
+        })
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#btn-appendTo2").click(function () {
+            $(this).css({ "color": "#900C3F", "background-color": "#DAF7A6" })
+            $("<p>Welcom in AppendTo </p>").appendTo("#conten2")
+            $("#conten2").css({ "color": "#900C3F", "background-color": "#DAF7A6" })
+        })
+        $("#btn-prependTo2").click(function () {
+            $(this).css({ "color": "#444141", "background-color": "#7A93F0" })
+            $("<img src='images/images.jpg' width='184' height='113'>").prependTo("#conten2")
+            $("#conten2").css({ "color": "#444141", "background-color": "#7A93F0" })
+
+        })
+    })
+</script>
+
+<body>
+    <div>
+        <button id="btn-appendto">AppendTo </button>
+        <button id="btn-prependto">PrependTo</button>
+        <div id="conten">
+            <h1 id="tex">Welcome to AppendTo & PrependTo Mathad JQuery</h1>
+        </div>
+    </div>
+    <div id="second">
+        <button id="btn-appendTo2">AppendTo</button>
+        <button id="btn-prependTo2">PrependTo</button>
+        <div id="conten2">
+            <h3>AppendTo And PrependTo</h3>
+        </div>
+    </div>
+</body>
+
+</html>

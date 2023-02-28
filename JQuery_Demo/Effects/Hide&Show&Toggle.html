@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Show & Toggle</title>
+</head>
+<style>
+    #fast {
+        background-color: darkgreen;
+        color: aliceblue;
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid#000;
+        border-radius: 10px;
+        float: left;
+
+    }
+
+    #men-body {
+        height: 50px;
+        flex: auto;
+        background-color: midnightblue;
+        color: aliceblue;
+        margin: 1px;
+        border-radius: 10px;
+    }
+
+    #tex {
+        padding: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-hide").click(function () {
+            $("#conten").hide(5000,);
+        })
+        $("#btn-show").click(function () {
+            $("#conten").show("slow");
+        })
+        $("#btn-toggle").click(function () {
+            $("#conten p").toggle(2000);
+        })
+    })
+</script>
+
+<body>
+    <div id="men-body">
+        <h2 id="tex">#</h2>
+
+        <div id="nevbar">
+        </div>
+    </div>
+    <div id="fast">
+        <button id="btn-hide">Hide</button>
+        <button id="btn-show">Show</button>
+        <button id="btn-toggle">Toggle</button>
+        <div id="conten">
+            <h1>Text Box</h1>
+            <p>Like other forms of writing, paragraphs follow a standard three-part structure with a beginning,
+                middle,
+                and end. These parts are the topic sentence, development and support, and conclusion. </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

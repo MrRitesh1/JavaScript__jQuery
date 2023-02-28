@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Append & Prepend Mathad JQuery</title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+
+    #second {
+        background-color: darkkhaki;
+        margin: 30px;
+    }
+
+    #conten2 {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn-append").click(function () {
+            $('#tex').append("<h2>Hello</h2>");
+        });
+        $("#btn-prepend").click(function () {
+            $('#conten').prepend("<h2>Hello</h2>");
+        })
+
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#btn-append2").click(function () {
+            $("#conten2").append("Welcome in Append<br>")
+            $(this).css({ "color": "red", "background-color": "#01050D" })
+        })
+        $("#btn-prepend2").click(function () {
+            $("#conten2").prepend("Welcome in Prepend<hr>")
+            $(this).css({ "color": "red", "background-color": "#01050D" })
+
+        })
+    })
+</script>
+
+<body>
+    <div>
+        <button id="btn-append">Add Append</button>
+        <button id="btn-prepend">Add Prepend</button>
+        <div id="conten">
+            <h1 id="tex">Welcome to Append & Prepend Mathad JQuery</h1>
+        </div>
+    </div>
+    <div id="second">
+        <button id="btn-append2">Append2</button>
+        <button id="btn-prepend2">Prepend2</button>
+        <div id="conten2">
+            <h3>Append And Prepend</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

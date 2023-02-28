@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Animate</title>
+</head>
+<style>
+    #men-body {
+        height: 400px;
+        width: 400px;
+        background-color: indigo;
+        color: aliceblue;
+        margin: 15px;
+        padding: 15px;
+        border: 5px solid #000;
+        border-radius: 30px;
+    }
+
+    #conten {
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+        position: relative;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-animate").click(function () {
+            $("#conten").animate({
+                left: '200px',
+            }).delay(1000).animate({
+                width: '300px', height: '300px', fontSize: '100px', border: '5px', borderRadius: '30px'
+            })
+        })
+    })
+</script>
+
+<body>
+
+
+    <div id="men-body">
+        <button id="btn-animate">Animate</button>
+
+        <div id="conten">
+            <h1>Animate</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<script>
+var age = [10 , 28 , 3 , 20,21,16];
+document.write(age+"<br><hr>");
+
+var b =age.filter (checkAdult);
+document.write(b + "<br><br><hr>");
+
+var d = age.some(Adult)
+document.write(d + "<br><br><hr>");
+
+function checkAdult(ages){
+return ages >= 18 ;
+}
+function Adult(ages1){
+return ages1 >= 18 ;
+}
+</script>
+</body>
+</html>

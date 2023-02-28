@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #conten {
+            background-color: cornsilk;
+            height: 50%;
+            width: 60%;
+            margin: 50px;
+
+        }
+
+        #second {
+            background-color: darkslategray;
+            margin: 30px;
+        }
+
+        #conten2 {
+            background-color: cornsilk;
+            height: 50%;
+            width: 50%;
+            padding: 10px;
+            margin: 50px;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn-attr").click(function () {
+                $("#img").attr("width", "500");
+            });
+        });  
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn-attr2").click(function () {
+                $("#tex").attr("id", "imgqa")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <button id="btn-attr">Set the width attribute of the image</button>
+
+        <div>
+            <img id="img" src="images/images.jpg" width="284" height="213"><br>
+        </div>
+    </div>
+    <div id="second">
+        <button id="btn-attr2">Attr</button>
+        <div id="conten2">
+            <h1 id="tex">Welcome to Attr</h1>
+
+        </div>
+    </div>
+</body>
+
+</html>

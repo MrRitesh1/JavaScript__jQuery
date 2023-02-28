@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadeIn&FadeTo&FadeToggle&FadeOut</title>
+</head>
+<style>
+    #men-body {
+        background-color: cadetblue;
+        border-radius: 5px;
+        border: 2px solid rgb(10, 95, 98);
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #conten {
+        background-color: rgb(89, 14, 159);
+        color: aliceblue;
+        border: 5px;
+        border-color: rgb(179, 116, 238);
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #box1 {
+        height: 50px;
+        width: 100px;
+        background-color: rgb(243, 64, 64);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    #box2 {
+        height: 50px;
+        width: 100px;
+        background-color: rgb(232, 237, 75);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    #box3 {
+        height: 50px;
+        width: 100px;
+        background-color: rgb(42, 209, 70);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-fadeout").click(function () {
+            $("#conten").fadeOut("slow");
+        })
+        $("#btn-fadein").click(function () {
+            $("#conten").fadeIn("slow");
+        })
+        $("#btn-fadetoggel").click(function () {
+            $("#conten").fadeToggle(3000, function () {
+                console.log("Helloo.......")
+            });
+        })
+        $("#box1").hover(function () {
+            $("#box1").fadeTo("slow", 0.2);
+        })
+        $("#box2").hover(function () {
+            $("#box2").fadeTo("slow", 0.5);
+        })
+        $("#box3").hover(function () {
+            $("#box3").fadeTo("slow", 0.8);
+        })
+    })
+</script>
+
+<body>
+    <div id="men-body">
+        <button id="btn-fadeout">FadeOut</button>
+        <button id="btn-fadein">FadeIn</button>
+        <button id="btn-fadetoggel">FadeToggle</button>
+        <button id="btn-fadeto">FadeTo</button>
+
+        <div id="conten">
+            <h1>Welcome To JQuery</h1>
+            <h3>FadeIn</h3>
+            <h3>FadeOut</h3>
+            <h3>FadeToggle</h3>
+            <h3>FadeTo</h3>
+            <div id="conten-color">
+                <div id="box1"></div>
+                <div id="box2"></div>
+                <div id="box3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

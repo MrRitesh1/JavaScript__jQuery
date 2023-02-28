@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After & Before Mathad JQuery</title>
+
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 50px;
+
+    }
+
+    #seconddiv {
+        background-color: lemonchiffon;
+    }
+
+    #conten2 {
+        background-color: aqua;
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+        margin: 30px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#btn-after').click(function () {
+            $('#conten').after("<h3> After</h3>");
+        });
+        $('#btn-before').click(function () {
+            $('#conten').before("<h3> Before</h3>");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#btn-after2").click(function () {
+            $("#conten2").after("<p>Welcome to JQuery Mathad In After</p>")
+        })
+        $("#btn-before2").click(function () {
+            $("#conten2").before("<p>Welcome to JQuery Mathad In Before</p>")
+        })
+    })
+</script>
+
+<body>
+    <div>
+        <button id="btn-after">After</button>
+        <button id="btn-before">Before</button>
+        <div id="conten">
+            <h1 id="tex">Welcome to After & Before Mathad JQuery</h1>
+        </div>
+    </div>
+    <div id="seconddiv">
+        <button id="btn-after2">After</button>
+        <button id="btn-before2">Before</button>
+        <div id="conten2">
+            <h3 id="tex2">After And Befor</h3>
+        </div>
+    </div>
+</body>
+
+</html>

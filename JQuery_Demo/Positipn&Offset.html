@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position & Offset</title>
+</head>
+<style>
+    #fast {
+        background-color: rgb(5, 82, 207);
+        color: aliceblue;
+        padding: 30px;
+        margin: 50px;
+    }
+
+    #conten {
+        margin: 20px;
+        /* position: relative; */
+        border: 5px solid#000;
+        padding: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-position").click(function () {
+            console.log($("#conten").position());
+        })
+        $("#btn-offset").click(function () {
+            // $("#fast").offset({ top: 0, left: 0 })
+            console.log($("#conten").offset());
+        })
+    })
+</script>
+
+<body>
+    <div id="fast">
+        <button id="btn-position">Position</button>
+        <button id="btn-offset">Offset</button>
+        <div id="conten">
+            <h2>JQurey Mathad in Position & Offset</h2>
+            <p>Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or theme.
+                Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, and
+                they also help readers process those thoughts effortlessly. Imagine how much harder reading and writing
+                would be if everything was just one long block of text. </p>
+        </div>
+    </div>
+</body>
+
+</html>

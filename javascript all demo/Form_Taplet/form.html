@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body {
+        flex: auto;
+        background-color: rgb(2, 2, 100);
+        color: aliceblue;
+    }
+
+    #hedar {
+        flex: auto;
+        margin: 5px;
+        padding: 0.2px;
+        background-color: #000;
+        border-radius: 10px;
+        border: 1px solid aliceblue;
+    }
+
+    h1 {
+        margin: 10px;
+    }
+
+    #man-body {
+        flex: auto;
+        margin: 10px;
+        padding: 20px;
+        background-color: lightblue;
+        border-radius: 20px;
+        color: #000;
+        font-size: 20px;
+
+    }
+
+    #btn-seva {
+        flex: auto;
+        width: 100px;
+        height: 30px;
+        background-color: cadetblue;
+        color: aliceblue;
+    }
+
+    #data {
+        flex: auto;
+        margin: 20px;
+        padding: 20px;
+        font-size: 20px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+
+
+    $(document).ready(function () {
+        $("#btn-seva").click(function () {
+            var newDATA = $("#form-text").serializeArray();
+            newDATA.push({ name: "MobilNumbar", value: "" });
+            localStorage.setItem('formData', JSON.stringify(newDATA));
+            $.each(newDATA, function (i, field) {
+                $("#data").append(
+                    "<h3>" + field.name + " :- " + field.value + "<br>" + "</h3>")
+            })
+            alert("Successful")
+        })
+        let key = prompt("Entar key ")
+        let value = prompt("Entar value")
+
+        localStorage.setItem(key, value)
+        console.log("this value at ${key} is ${localStorage.setItem(key)}")
+
+        if (key == "red" || key == "blu") {
+            localStorage.removeItem(key)
+        }
+    })
+</script>
+
+<body>
+    <div id="hedar">
+        <h1>Registration Form</h1>
+    </div>
+    <div id="man-body">
+        <div id="form-data">
+            <form action="" id="form-text">
+                Data:- <input type="date" name="Deta" placeholder="00/00/000" /><br><br>
+                First name:- <input type="text" name="FirstName" placeholder="enter first name" /><br><br>
+                Last name:- <input type="text" name="LastName" placeholder="enter last name" /><br><br>
+                Email:- <input type="email" name="Email" placeholder="xyz@gmail.com" /><br><br>
+                Mobil numbar: - <input type="number" name="Number" placeholder="1234567890" /><br><br>
+                <label>Gender :-
+                    <input type="radio" value="Male" name="Gender" id="101">Male
+                    <input type="radio" value="Female" name="Gender" id="102">Female
+                </label><br><br>
+                <label>Courses :- <br>
+                    <input type="checkbox" value="C" name="Courses" id="101"> C <br>
+                    <input type="checkbox" value="C++" name="Courses" id="102"> C++ <br>
+                    <input type="checkbox" value="JavaScript" name="Courses" id="103"> JavaScript <br>
+                    <input type="checkbox" value="React JS" name="Courses" id="104"> React JS <br>
+                    <input type="checkbox" value="Nood JS" name="Courses" id="106"> Nood JS <br>
+                    <input type="checkbox" value="React Native" name="Courses" id="105"> React Native <br>
+                </label><br><br>
+                <label>Address:-<br>
+                    <input type="text" name="StreetAddress" placeholder="StreetAddress" /> <br><br>
+                    <input type="text" name="StreetAddressLine2" placeholder="StreetAddressLine2" /><br><br>
+                </label>
+                <select name="City">
+                    <option value="City">City</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Ahemdabad">Ahemdabad</option>
+                    <option value="Gadhinagar">Gadhinagar</option>
+                    <option value="Bharuch">Bharuch</option>
+                </select>
+            </form>
+        </div><br>
+        <button id="btn-seva">Seva Data</button>
+    </div>
+    <div id="data">
+    </div>
+</body>
+
+</html>

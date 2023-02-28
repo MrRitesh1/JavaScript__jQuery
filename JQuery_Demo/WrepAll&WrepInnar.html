@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrepAll & WrepInnar</title>
+</head>
+<style>
+    #fast {
+        background-color: indigo;
+        color: rgb(250, 248, 245);
+        margin: 10px;
+        padding: 10px;
+        border: 5px solid#000;
+        border-radius: 10px;
+    }
+
+    #tex {
+        background-color: rgb(5, 112, 11);
+        color: aliceblue;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    #hedar {
+        background-color: darkblue;
+        color: aliceblue;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn-wrepAll").click(function () {
+            $("p").wrapAll("<div id='tex'></div>")
+        })
+        $("#btn-wrepInnar").click(function () {
+            $("h1").wrapInner("<span id = 'hedar'></span>")
+        })
+    })
+</script>
+
+<body>
+    <div id="fast">
+        <button id="btn-wrepAll">WrepAll</button>
+        <button id="btn-wrepInnar">WrepInnar</button>
+        <div id="conten">
+            <h1>Text Box</h1>
+            <p>Before we dive into paragraph structure, let’s start with paragraph meaning. A paragraph is an individual
+                segment of writing that discusses a central idea, </p>
+            <p>typically with more than one sentence. It even has its
+                own paragraph symbol in copyediting, called the pilcrow (¶), not to be confused with the section symbol
+                called the silcrow (§) that’s common in legal code. </p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

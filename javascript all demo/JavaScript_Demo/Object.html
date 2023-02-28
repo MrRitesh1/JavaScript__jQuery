@@ -1,0 +1,48 @@
+<html>
+<tital> JavaScript Object <br><hr><hr><br> </tital>
+<body>
+<script>
+ 
+var  a = {
+fname : 'Ritesh',
+lname : 'Navadiya',
+age : 23,
+email :'riteshnavadiya@gmail.com',
+
+living : {
+'city' : 'Gujarat',
+'country' : 'India',
+},
+
+movies : ['Dhoom' , 'Don' , 'Shplay' ],
+
+salary : function () {
+return 30000;
+},
+
+fullname : function () {
+return this.fname + " " + this.lname;
+},
+
+}
+
+console.log(a); 
+console.log(a.fname); 
+document.write(a.email+ "<br><hr>");
+
+document.write(a.living.city+ "<br><hr>");
+
+document.write(a.movies + "<br>");
+document.write(a.movies [1]+ "<br><hr>");
+
+document.write(a.salary() + "<br>");
+document.write(a.fullname() + "<br>");
+</script>
+<hr><hr>
+// JavaScript Object and Object in Arrays and object in function
+<br>
+\\ salary and fullname is a Methods of a 
+<br>
+\\ Object in Object
+</body>
+</html>

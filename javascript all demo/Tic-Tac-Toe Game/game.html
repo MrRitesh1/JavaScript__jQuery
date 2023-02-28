@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    #men {
+        flex: auto;
+        border: 3px solid#000;
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(232, 216, 156);
+        width: 400px;
+        border-radius: 40px;
+    }
+
+    #hedar {
+        flex: auto;
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(102, 234, 244);
+        border: 1px solid#000;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    #game-body {
+        flex: auto;
+        height: 400px;
+        width: 400px;
+        margin: 50px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    #row-1,
+    #row-2,
+    #row-3 {
+        display: flex;
+        margin: 10px;
+    }
+
+    #cell-1,
+    #cell-2,
+    #cell-3,
+    #cell-4,
+    #cell-5,
+    #cell-6,
+    #cell-7,
+    #cell-8,
+    #cell-9 {
+        height: 100px;
+        width: 100px;
+        border: 4px solid #000;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .red {
+        background-color: rgb(242, 9, 9);
+    }
+
+    .blue {
+        background-color: rgb(58, 17, 223);
+    }
+
+    .fa {
+        font-size: 48px;
+        color: rgb(238, 225, 225);
+    }
+
+    #conform {
+        flex: auto;
+        /* margin-left: 160px; */
+    }
+
+    #btn-conform {
+        border: 2px solid rgb(227, 35, 35);
+        background-color: crimson;
+        color: aliceblue;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #text2 {
+        height: 30px;
+        width: 40px;
+        background-color: rgb(2, 41, 43);
+        text-align: center;
+        color: aliceblue;
+        border-radius: 20px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        debugger
+        var player = 1;
+        var player1 = 1;
+        var player2 = 2;
+        var SelectedBoxJson = [];
+        // var SelectedBoxJson = [{
+        //     SelectedBY: 1,
+        //     SelectedBox: 5,
+        // }, {
+        //     SelectedBY: 2,
+        //     SelectedBox: 1,
+        // }, {
+        //     SelectedBY: 1,
+        //     SelectedBox: 6,
+        // }, {
+        //     SelectedBY: 2,
+        //     SelectedBox: 2,
+        // }, {
+        //     SelectedBY: 1,
+        //     SelectedBox: 7,
+        // }, {
+        //     SelectedBY: 2,
+        //     SelectedBox: 3,
+        // }, {
+        //     SelectedBY: 1,
+        //     SelectedBox: 8,
+        // }, {
+        //     SelectedBY: 2,
+        //     SelectedBox: 9,
+        // }, {
+        //     SelectedBY: 1,
+        //     SelectedBox: 4,
+        // }];
+        $("#btn-conform").prop('disabled', true);
+        $(".btn-box").click(function () {
+            debugger
+            var selectedBox = $(this).attr('id');
+            // selectedBox = parseInt(selectedBox.split('-')[1]);
+            var data = SelectedBoxJson.find(el => el.SelectedBox === selectedBox);
+            var lastElement = SelectedBoxJson[SelectedBoxJson.length - 1];
+            console.log(lastElement);
+            console.log(data);
+            if (data) {
+                $("#lebal").text("Alredi Silected");
+                return;
+            } else {
+                $("#lebal").text("");
+            }
+            $("#btn-conform").prop('disabled', false)
+            if (lastElement && lastElement.SelectedBY === player) {
+                SelectedBoxJson = SelectedBoxJson.filter(x => x.SelectedBox != lastElement.SelectedBox);
+                console.log(SelectedBoxJson);
+                var Element = '#' + lastElement.SelectedBox;
+                $(Element).removeClass("red");
+                $(Element).removeClass("blue");
+                $(Element).text("");
+                $(Element).text("");
+            } else {
+            }
+            SelectedBoxJson.push({ SelectedBY: player, SelectedBox: selectedBox });
+            if (player === 1) {
+                $(this).html('<i class="fa fa-times" aria-hidden="true"></i>')
+                $(this).addClass("red");
+            }
+            else {
+                $(this).html('<i class="fa fa-check" aria-hidden="true"></i>')
+                $(this).addClass("blue");
+
+            }
+            // function check(symbol) {
+            //     if ($(".cell-1").hasClass(symbol) &&
+            //         $(".cell-2").hasClass(symbol) &&
+            //         $(".cell-3").hasClass(symbol)) {
+            //         $(".cell-1").css("color", "green");
+            //         $(".cell-2").css("color", "green");
+            //         $(".cell-3").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-4").hasClass(symbol) &&
+            //         $(".cell-5").hasClass(symbol) &&
+            //         $(".cell-6").hasClass(symbol)) {
+            //         $(".cell-4").css("color", "green");
+            //         $(".cell-5").css("color", "green");
+            //         $(".cell-6").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-7").hasClass(symbol) &&
+            //         $(".cell-8").hasClass(symbol) &&
+            //         $(".cell-9").hasClass(symbol)) {
+            //         $(".cell-7").css("color", "green");
+            //         $(".cell-8").css("color", "green");
+            //         $(".cell-9").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-1").hasClass(symbol) &&
+            //         $(".cell-3").hasClass(symbol) &&
+            //         $(".cell-7").hasClass(symbol)) {
+            //         $(".cell-1").css("color", "green");
+            //         $(".cell-3").css("color", "green");
+            //         $(".cell-7").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-2").hasClass(symbol) &&
+            //         $(".cell-5").hasClass(symbol) &&
+            //         $(".cell-8").hasClass(symbol)) {
+            //         $(".cell-2").css("color", "green");
+            //         $(".cell-5").css("color", "green");
+            //         $(".cell-8").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-3").hasClass(symbol) &&
+            //         $(".cell-6").hasClass(symbol) &&
+            //         $(".cell-9").hasClass(symbol)) {
+            //         $(".cell-3").css("color", "green");
+            //         $(".cell-6").css("color", "green");
+            //         $(".cell-9").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-1").hasClass(symbol) &&
+            //         $(".cell-5").hasClass(symbol) &&
+            //         $(".cell-9").hasClass(symbol)) {
+            //         $(".cell-1").css("color", "green");
+            //         $(".cell-5").css("color", "green");
+            //         $(".cell-9").css("color", "green");
+            //         return true;
+            //     } else if ($(".cell-3").hasClass(symbol) &&
+            //         $(".cell-5").hasClass(symbol) &&
+            //         $(".cell-7").hasClass(symbol)) {
+            //         $(".cell-3").css("color", "green");
+            //         $(".cell-5").css("color", "green");
+            //         $(".cell-7").css("color", "green");
+            //         return true;
+
+            //     } else {
+            //         return false;
+            //     }
+            // }
+
+        });
+        $("#btn-conform").click(function () {
+            $("#btn-conform").prop('disabled', true);
+            if (player == 1) {
+                player = 2;
+            } else {
+                player = 1;
+            }
+            $("#text2").text(player);
+        });
+    });
+
+</script>
+
+<body>
+    <div id="men">
+        <div id="hedar">
+            <h1>Tic-Tac-Toe Game</h1>
+        </div>
+        <lable id="game-body">
+            <div id="row-1">
+                <button class="btn-box" id="cell-1" class="cell-1 r"></button>
+                <button class="btn-box" id="cell-2" class="cell-2 r"></button>
+                <button class="btn-box" id="cell-3" class="cell-3 r"></button>
+            </div>
+            <div id="row-2">
+                <button class="btn-box" id="cell-4" class="cell-4 r"></button>
+                <button class="btn-box" id="cell-5" class="cell-5 r"></button>
+                <button class="btn-box" id="cell-6" class="cell-6 r"></button>
+            </div>
+            <div id="row-3">
+                <button class="btn-box" id="cell-7" class="cell-7 r"></button>
+                <button class="btn-box" id="cell-8" class="cell-8 r"></button>
+                <button class="btn-box" id="cell-9" class="cell-9 r"></button>
+            </div>
+            <div id="conform">
+                <h1 id="text">Player<h2 id="text2">1</h2>
+                    <h2 id="lebal"></h2>
+                </h1>
+                <button id="btn-conform">Conform</button>
+            </div>
+
+    </div>
+    </div>
+
+</body>

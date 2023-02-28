@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .A {
+        color: blue;
+    }
+</style>
+
+
+<body>
+    <div id="men">
+        <h3 id="text">hello</h3>
+        <h3 id="text1">welcome</h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var index = $("#text");
+            $("#men").html("Index : " + $("h3").index(index));
+        })
+    </script>
+</body>
+
+</html>

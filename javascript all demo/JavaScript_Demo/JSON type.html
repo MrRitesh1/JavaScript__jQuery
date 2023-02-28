@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <h1>how to access element from json</h1>
+    <h3>Console Opan</h3>
+</body>
+
+</html>
+
+
+
+
+
+<script>
+    var data = '{"name": {"A":"Doremon","B":"Nobita"},"age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
+
+    var json = JSON.parse(data);
+
+    console.log(json["name"]);
+    console.log(json.name);
+    console.log(json["name"].A);
+    console.log(json.name.B);
+
+    console.log(json.address);
+    console.log(json["address"].city);
+
+    console.log(json.phoneNumber[0].number);
+    console.log(json.phoneNumber[1].type);
+
+    console.log(json.phoneNumber.number);
+</script>

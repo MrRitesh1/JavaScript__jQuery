@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTop</title>
+</head>
+<style>
+    #conten {
+        background-color: aqua;
+        height: 50%;
+        width: 400px;
+        padding: 10px;
+        margin: 50px;
+        overflow: auto;
+
+    }
+
+    #tex {
+        width: 400px;
+    }
+
+    #box {
+        background-color: darkkhaki;
+        height: 80px;
+        position: fixed;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(document).scroll(function () {
+            $("#box").html("");
+            $("#box").append("Top : " + $(document).scrollTop())
+
+            // console.log($(document).scrollTop());
+
+        })
+    })
+</script>
+
+<body>
+    <button id="btn-scrollTop">ScrollTop</button>
+    <button id="btn-scrollLeft">ScrollLeft</button>
+    <div id="box"></div>
+    <div id="conten">
+
+        <p id="tex">Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or theme.
+            Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, and
+            they also help readers process those thoughts effortlessly. Imagine how much harder reading and writing
+            would be if everything was just one long block of text.
+
+            There’s a lot of flexibility when it comes to writing paragraphs, but if there’s one steadfast rule, it’s
+            this: Paragraphs should relate to one main topic or point. The paragraph itself often contains multiple
+            points spanning several sentences, but they should all revolve around one core theme. Just as sentences
+            build upon each other to communicate the paragraph’s core theme, paragraphs work together to communicate the
+            core theme of the writing as a whole.
+            gyufyststsrtffyxcigyygcgycvhvhvhvvuihohikhluigy8uftycdrtxderxrtdfty7uijokesdtryguhijokpl.
+            That’s the basic idea, but in practice there’s more to it. Let’s look at the four main types of paragraphs
+            to learn how and when to use them.
+            Expository paragraphs
+            Essays, academic papers, and journalistic articles mainly use expository paragraphs to thoroughly explain an
+            individual point. These paragraphs rely on data, statistics, or citations from other sources to present
+            facts and build up to an irrefutable conclusion.
+
+            Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or theme.
+            Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, and
+            they also help readers process those thoughts effortlessly. Imagine how much harder reading and writing
+            would be if everything was just one long block of text.
+
+            There’s a lot of flexibility when it comes to writing paragraphs, but if there’s one steadfast rule, it’s
+            this: Paragraphs should relate to one main topic or point. The paragraph itself often contains multiple
+            points spanning several sentences, but they should all revolve around one core theme. Just as sentences
+            build upon each other to communicate the paragraph’s core theme, paragraphs work together to communicate the
+            core theme of the writing as a whole.
+
+            That’s the basic idea, but in practice there’s more to it. Let’s look at the four main types of paragraphs
+            to learn how and when to use them.
+
+            Expository paragraphs
+            Essays, academic papers, and journalistic articles mainly use expository paragraphs to thoroughly explain an
+            individual point. These paragraphs rely on data, statistics, or citations from other sources to present
+            facts and build up to an irrefutable conclusion.
+
+            Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or theme.
+            Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, and
+            they also help readers process those thoughts effortlessly. Imagine how much harder reading and writing
+            would be if everything was just one long block of text.
+
+            There’s a lot of flexibility when it comes to writing paragraphs, but if there’s one steadfast rule, it’s
+            this: Paragraphs should relate to one main topic or point. The paragraph itself often contains multiple
+            points spanning several sentences, but they should all revolve around one core theme. Just as sentences
+            build upon each other to communicate the paragraph’s core theme, paragraphs work together to communicate the
+            core theme of the writing as a whole.
+
+            That’s the basic idea, but in practice there’s more to it. Let’s look at the four main types of paragraphs
+            to learn how and when to use them.
+
+            Expository paragraphs
+            Essays, academic papers, and journalistic articles mainly use expository paragraphs to thoroughly explain an
+            individual point. These paragraphs rely on data, statistics, or citations from other sources to present
+            facts and build up to an irrefutable conclusion.
+            Descriptive paragraphs
+            Common in fiction and certain styles of journalistic or other nonfiction writing, a descriptive paragraph
+            contains various details of the same thing, with each sentence adding new insight. A paragraph in a horror
+            novel might describe how it feels walking around the woods alone; a love letter’s paragraph might focus on
+            the details of your significant other’s eyes. No matter the context, descriptive paragraphs are meant to
+            provide the clearest picture of your subject.
+
+            Persuasive paragraphs
+            For editorials and opinion pieces, persuasive paragraphs are meant to convince the reader of a specific
+            point, with each sentence presenting evidence or reasoning to support that point. Like expository
+            paragraphs, persuasive paragraphs may contain data and statistics, but here, these work to support an
+            opinion rather than verify a fact. The trick to writing persuasive paragraphs is knowing how to assert your
+            opinion without sounding preachy. </p>
+    </div>
+</body>
+
+</html>

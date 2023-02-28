@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serialize</title>
+</head>
+<style>
+    #man-body {
+        flex: auto;
+        margin: 10px;
+        background-color: bisque;
+        padding: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#seva").click(function () {
+            // $("#data").html($("#tex-form1").serialize());
+            var a = $("#tex-form1").serialize();
+            alert(a)
+            return false
+        });
+
+        $("#btn-seva").click(function () {
+            var newdata = $("#tex-form2").serializeArray();
+            $.each(newdata, function (i, field) {
+                $("#data2").append(field.name + " :- " + field.value + "<br>")
+            })
+        })
+    });
+
+
+</script>
+
+<body>
+    <!-- serialize() Method-->
+    <div id="man-body">
+        <form action="" id="tex-form1">
+            First name:- <input type="text" name="FirstName" value="" /><br><br>
+            Last name:- <input type="text" name="LastName" value="" /><br>
+        </form><br>
+        <button id="seva">Seva Data</button>
+    </div>
+
+    <div id="data"></div>
+
+    <!-- serializeAreey() Mathod -->
+    <div id="second-body">
+        <form accept="" id="tex-form2">
+            First Name:- <input type="text" name="FirstName" value="" />
+            Last Name:- <input type="text" name="LastName" value="" />
+
+        </form>
+    </div>
+    <button id="btn-seva">Seva Data</button>
+    <div id="data2"></div>
+
+
+</body>
+
+</html>

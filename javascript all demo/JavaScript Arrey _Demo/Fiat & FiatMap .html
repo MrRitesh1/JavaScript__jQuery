@@ -1,0 +1,28 @@
+<html>
+<body>
+<script>
+ var a = [10, 20, 30, [11, 22, 33], [21, 31, 41]];
+    document.write(a+ "<br><br>");
+
+ var a = [10, 20, 30, [11, 22, 33,[25,24]], [21, 31, 41]];
+    a = a.flat();
+    console.log(a);
+
+    a = a.flat(2);
+    console.log(a);
+    
+    a = a.flat(Infinity);
+    console.log(a);
+
+
+var b = ["Doremon to" , "Nobita" ,"Tomi And Jeri"];
+ b = b.flatMap((name) => {
+return name.split (" ");
+})
+console.log(b);
+
+</script>
+</body>
+</html>
+
+Not :- inspect  console.log//

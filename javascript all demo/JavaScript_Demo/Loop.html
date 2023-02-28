@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Welcome </title>
+</head>
+<body>
+<h1> Loops Tayp (5)</h1>
+<h2>while loop , do/while loop , for loop , for/in loop , forEach</h2>
+<h3>while loop</h3>
+<script>
+var a = 5
+
+while(a <= 10){
+ document.write("Welcome <br>");
+a = a + 1;
+}
+</script>
+
+<h3>do/while loop</h3>
+<script>
+var a = 5
+do{
+ document.write(a + ") Hello <br>");
+a++;
+
+}while(a <= 10){
+
+}
+</script>
+
+<h3>for loop</h3>
+<script>
+
+for(a = 1 ; a <= 10; a++){
+if (a == 5){
+document.write(a + ")Hello <br>")
+//continue;
+break;
+}
+
+document.write(a + ")Hi <br>")
+}
+
+</script>
+
+<h3>Nested loop</h3>
+<script>
+for ( c = 1; c <= 100; c = c + 10){
+for ( b = c; b < c+10; b++){
+document.write(b + " ");
+}
+document.write("<br>");
+}
+</script>
+
+<script>
+for ( c = 1; c <= 5; c++){
+for ( b = 1; b <= c; b++){
+document.write(b + " ");
+}
+document.write("<br>");
+}
+
+</script>
+
+<script>
+for ( c = 1; c <= 5; c++){
+for (b = 1 ; b <= c; b++){
+document.write(c + " ")
+}
+document.write("<br>")
+}
+</script>
+
+<script>
+for ( c = 5; c >= 1; c--){
+for (b = 1 ; b <= c; b++){
+document.write(c + " ")
+}
+document.write("<br>")
+}
+</script>
+<script>
+for ( c = 5; c >= 1; c--){
+for (b = c ; b >= 1; b--){
+document.write(b + " ")
+}
+document.write("<br>")
+}
+</script>
+
+</body>
+</html>

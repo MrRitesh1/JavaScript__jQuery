@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width & Height</title>
+</head>
+<style>
+    #fast {
+        background-color: darkgreen;
+        color: aliceblue;
+        margin: 10px;
+        padding: 10px;
+        border: 100px;
+        border-color: black;
+    }
+
+    #conten {
+        background-color: darkblue;
+        margin: 15px;
+        padding: 15px;
+        border: 10px solid #000;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn-widht").click(function () {
+            console.log("Width : " + $("#conten").width());
+            console.log("InnerWidth : " + $("#conten").innerWidth());
+            console.log("OuterWidth : " + $("#conten").outerWidth());
+            console.log("OuterWidth(true) : " + $("#conten").outerWidth(true));
+        })
+        $("#btn-heihth").click(function () {
+            console.log("height : " + $("#conten").height());
+            console.log("innerHeight : " + $("#conten").innerHeight());
+            console.log("outerHeight : " + $("#conten").outerHeight());
+            console.log("outerHeight(true) : " + $("#conten").outerHeight(true));
+        })
+    })
+</script>
+
+<body>
+    <div id="fast">
+        <button id="btn-widht">Width</button>
+        <button id="btn-heihth">Heihth</button>
+        <div id="conten">
+            <div id="tex">
+                <h1>Text Box</h1>
+                <p>Before we dive into paragraph structure, let’s start with paragraph meaning. A paragraph is an
+                    individual segment of writing that discusses a central idea, typically with more than one sentence.
+                    It even has its own paragraph symbol in copyediting, called the pilcrow (¶), not to be confused with
+                    the section symbol called the silcrow (§) that’s common in legal code. </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

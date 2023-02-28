@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddClass & Remove Class</title>
+</head>
+<style>
+    #fast {
+        background-color: darkgreen;
+        color: aliceblue;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .newClass {
+        background-color: darkcyan;
+        color: bisque;
+    }
+
+    .newClass1 {
+        background-color: darkblue;
+        color: azure;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#btn-addclass').click(function () {
+            $('#canten,#btn').addClass("newClass newClass1");
+        })
+        $('#btn-removeclass').click(function () {
+            $('#canten').removeClass("newClass1");
+        })
+        $('#btn-toggalclass').click(function () {
+            $('#canten').toggleClass("newClass1");
+        })
+    })
+</script>
+
+<body>
+    <div id="fast">
+        <div id="btn">
+            <button id="btn-addclass">AddClass</button>
+            <button id="btn-removeclass">RemoveClass</button>
+            <button id="btn-toggalclass">Toggle</button>
+        </div>
+        <div id="canten">
+            <h3>Test Box</h3>
+            <p>djkwldjwijd jdlwdijwo ldjljdoiklmkcl jldj
+                dnklmDLK;QKKLKLKKLK KLKLK
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
