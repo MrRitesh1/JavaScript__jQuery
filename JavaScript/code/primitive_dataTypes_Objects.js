@@ -16,13 +16,13 @@
 */
 //-------------------------------------------------------------------------------------------------------------
 // EX:- 
-console.log(" Typs of Primitives DataType")
+console.log(" Typs of Primitives DataType");
 let a = null;
 let b = 345;
 let c = true;// can also be false
-let d = BigInt("25") + BigInt("5")
+let d = BigInt("25") + BigInt("5");
 let e = "Welcome"
-let f = Symbol("I m a Nice Symbol")
+let f = Symbol("I m a Nice Symbol");
 let g
 
 console.log(
@@ -33,8 +33,8 @@ console.log(
   "Boolean =", e, "\n",
   "Bigint =", f, "\n",
   "Undefined =", g, "\n"
-)
-console.log("-----------------------------------------------------")
+);
+console.log("-----------------------------------------------------");
 //-------------------------------------------------------------------------------------------------------------
 /*
  Objects Basec..
@@ -53,4 +53,10 @@ const itam = {
   "Jignesh": undefined
 }
 
-console.log(itam["Ritesh"])
+console.log(itam["Ritesh"]);
+console.log(itam.Chirag);
+console.log("-----------------------------------");
+// itam object in values add ..... 
+itam['Friend'] = "Harsh";
+console.log(itam);
+//-----------------------------------------------
