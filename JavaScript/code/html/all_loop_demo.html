@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Condition</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(245, 230, 162);
+      color: brown;
+      /* text-align: center; */
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center">Welcome to</h1>
+
+    <h3>* Pattern For JavaScript *</h3>
+    <script>
+      for (var i = 1; i <= 3; i++) {
+        document.write(" Hello<br>");
+      }
+      document.write("---: Pattern :---<br>");
+      for (var i = 0; i <= 3; i++) {
+        for (var j = 0; j <= 3; j++) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+      document.write("---: Pattern :---<br>");
+      for (var i = 0; i <= 5; i++) {
+        for (var j = 0; j <= i; j++) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+      document.write("---: Pattern :---<br>");
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 5; j >= i; j--) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+      document.write("---: Pattern :---<br>");
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j >= i; j--) {
+          document.write(" ");
+        }
+        for (var q = 1; q <= i; q++) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+      document.write("---: Pattern :---<br>");
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 5; j >= 1; j--) {
+          if (i >= j) {
+            document.write(" * ");
+          } else {
+            document.write("");
+          }
+        }
+
+        document.write("<br>");
+      }
+      //   document.write("---: Pattern :---<br>");
+      //   for (var i = 5; i >= 1; i--) {
+      //     for (var j = 5-1; j >= i; j--) {
+      //       document.write(" ");
+      //     }
+      //     for (var q = 1; q <= i; q++) {
+      //       document.write(" * ");
+      //     }
+      //     document.write("<br>");
+      //   }
+      //   document.write("---: Pattern :---<br>");
+      //   for (var i = 1; i <= 5; i++) {
+      //     for (var j = 5; j >= 1; j--) {
+      //       if (i >= j) {
+      //         document.write("* ");
+      //       } else {
+      //         document.write(" ");
+      //       }
+      //     }
+      //     document.write("<br>");
+      //   }
+    </script>
+  </body>
+</html>

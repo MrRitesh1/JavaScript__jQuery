@@ -1,0 +1,27 @@
+15 /03/ 2023
+
+Variable type
+1)var
+2)lep  
+3)const
+
+~ Sentx // Variable Variable_Name = value 
+
+1) var 
+  - Variable declare
+      var a = 10;
+      document.write(a);
+not :- malti time declare and difin...     
+
+2) let 
+    - Variable declare
+      let a = 10;
+      document.write(a);
+not :- one time declare and malti time difi...
+
+3) const 
+  - Variable declare
+      const a = 10;
+      document.write(a);
+not :- one time declare and one time difin...       
+         

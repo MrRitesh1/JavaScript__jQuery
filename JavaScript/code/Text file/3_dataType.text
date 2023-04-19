@@ -1,0 +1,58 @@
+15/03/2023
+ 
+DataType
+
+ Typs of Primitives DataType 
+        1).Null
+        2).Number
+        3).Symbol
+        4).String
+        5).Boolean
+        6).Bigint
+        7).Undefined
+
+  Object is a non Primitives DataType
+
+Ex:- 
+
+let a = null;
+let b = 345;
+let c = true;// can also be false
+let d = BigInt("25") + BigInt("5");
+let e = "Welcome"
+let f = Symbol("I m a Nice Symbol");
+let g;
+
+console.log(
+  "Null =", a,
+  "Number =", b,
+  "Symbol =", c,
+  "String =", d,
+  "Boolean =", e,
+  "Bigint =", f,
+  "Undefined =", g,
+);
+
+
+Object is a non Primitives DataType
+
+ Objects Basec..
+   Objects is Key value pres..
+   Non Primitives DataType
+
+
+EX:-
+
+const itam = {
+  "Ritesh": true,
+  "Chirag": false,
+  "Doremon": 67,
+  "Jignesh": undefined
+}
+
+console.log(itam["Ritesh"]);
+console.log(itam.Chirag);
+console.log("-----------------------------------");
+// itam object in values add ..... 
+itam['Friend'] = "Harsh";
+console.log(itam);

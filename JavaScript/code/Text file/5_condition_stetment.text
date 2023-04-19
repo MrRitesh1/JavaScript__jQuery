@@ -1,0 +1,53 @@
+17/03/2023
+
+
+if  stetmant
+if ...else stetmant
+if .. else if ..else stetmant
+switch cesa
+
+prompt (usar input )
+alert
+parseInt (Converting the string to a number)
+--------------------------------------------------------------------------
+sentx : 
+if = 
+      if(condisn)
+      {
+          body
+      }
+
+if else =
+
+       if( condisn ){
+              body
+       } else{
+              body
+       }
+
+if elseif else =
+
+       if( condisn ){
+              body
+       } else if ( condisn ){
+
+              body
+       }else if ( condisn ){
+        
+              body
+       } else{
+            body
+       }
+
+
+switch _ cesa =
+
+
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}

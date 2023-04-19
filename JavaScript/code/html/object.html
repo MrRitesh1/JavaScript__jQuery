@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <h2>Welcome to Objects</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      // Create an object:
+      const person = {
+        firstName: "Doremon",
+        lastName: "Tom",
+        age: 50,
+        Color: {
+          a: "blue",
+          b: "red",
+          c: "bleka",
+        },
+      };
+
+      // Display some data from the object:
+      document.getElementById("demo").innerHTML =
+        person.firstName + " <h1>is " + person.age + "years old.</h1>";
+      document.getElementById("demo1").innerHTML = person.Color.c;
+    </script>
+  </body>
+</html>
